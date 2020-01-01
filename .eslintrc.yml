@@ -15,6 +15,7 @@ parserOptions:
 plugins:
   - jest
   - prettier
+<<<<<<< HEAD
   - prefer-arrow
   - jsdoc
 rules:
@@ -26,3 +27,6 @@ rules:
         { 'disallowPrototype': true, 'singleReturnOnly': false, 'classPropertiesAllowed': false },
       ],
   }
+=======
+rules: { prettier/prettier: ['error'] }
+>>>>>>> feat(prettier): adding increased support for prettier
