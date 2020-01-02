@@ -54,14 +54,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/collin-miller/node-js-starter-kit.git"
+    "url": "git+https://github.com/unicorn-froyo/node-js-starter-kit.git"
   },
   "author": "Collin Miller",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/collin-miller/node-js-starter-kit/issues"
+    "url": "https://github.com/unicorn-froyo/node-js-starter-kit/issues"
   },
-  "homepage": "https://github.com/collin-miller/node-js-starter-kit#readme",
+  "homepage": "https://github.com/unicorn-froyo/node-js-starter-kit#readme",
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint:eslint && npx pretty-quick --staged",
