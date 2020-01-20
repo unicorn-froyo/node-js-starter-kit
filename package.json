@@ -47,21 +47,25 @@
     "commit": "npx git-cz",
     "first-release": "npm run release -- --first-release",
     "release": "npx standard-version --preset angular",
-    "lint": "npx eslint . --debug"
+    "lint:eslint": "npx eslint .",
+    "lint:ci": "npm run lint:eslint -- --debug",
+    "lint:prettier": "npx prettier \"**/*.*\" --config .prettierrc.yaml --ignore-path .prettierignore",
+    "lint:prettier:fix": "npm run lint:prettier -- --write \"**/*.*\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/collin-miller/node-js-starter-kit.git"
+    "url": "git+https://github.com/unicorn-froyo/node-js-starter-kit.git"
   },
   "author": "Collin Miller",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/collin-miller/node-js-starter-kit/issues"
+    "url": "https://github.com/unicorn-froyo/node-js-starter-kit/issues"
   },
-  "homepage": "https://github.com/collin-miller/node-js-starter-kit#readme",
+  "homepage": "https://github.com/unicorn-froyo/node-js-starter-kit#readme",
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS && pretty-quick --staged"
+      "pre-commit": "npm run lint:eslint && npx pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "config": {
