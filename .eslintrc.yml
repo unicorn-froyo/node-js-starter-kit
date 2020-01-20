@@ -5,6 +5,7 @@ env:
 extends:
   - airbnb-base
   - prettier
+  - plugin:jsdoc/recommended
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
@@ -14,6 +15,14 @@ parserOptions:
 plugins:
   - jest
   - prettier
-rules: {
-    prettier/prettier: ["error"]
+  - prefer-arrow
+  - jsdoc
+rules:
+  {
+    prettier/prettier: ['error'],
+    prefer-arrow/prefer-arrow-functions:
+      [
+        'error',
+        { 'disallowPrototype': true, 'singleReturnOnly': false, 'classPropertiesAllowed': false },
+      ],
   }
