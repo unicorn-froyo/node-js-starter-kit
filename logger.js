@@ -11,11 +11,11 @@ const myFormat = printf(
   },
 );
 
-function getLogFileName() {
+const getLogFileName = () => {
   const logDir = process.env.LOG_DIR || __dirname;
   const logFileName = process.env.SERVICE_NAME || 'application';
   return path.join(logDir, `${logFileName}-%DATE%.log`);
-}
+};
 
 const logger = createLogger({
   level: process.env.LOG_LEVEL || 'info',
